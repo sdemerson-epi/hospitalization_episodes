@@ -1,4 +1,8 @@
-/* SAS code to identify hospitalization episodes of care in Canadian hospital data (Discharge Abstract Database) 
+/* 
+
+# July 2025 update: This page is a work in progress, it will be finalized in July 2025 #
+
+SAS code to identify hospitalization episodes of care in Canadian hospital data (Discharge Abstract Database) 
 see associated publication: 
 
 Emerson SD, McLinden T, Sereda P, Trigg J, Yonkman AM, Salters K, Au S, Kooij KW, Budu M, Lima VD, Barrios R, Hogg RS. 
@@ -25,6 +29,5 @@ The process for the code outlined below is as follows:
    Note that all episodes were based on a gap from discharge to next admissionj
 
 5. Each version of the episode creation definitions are flagged, for users to use their preferred definition. 
-   Additionally
 
 */
