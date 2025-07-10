@@ -3,6 +3,28 @@ see associated publication:
 
 Emerson SD, McLinden T, Sereda P, Trigg J, Yonkman AM, Salters K, Au S, Kooij KW, Budu M, Lima VD, Barrios R, Hogg RS. 
 Identifying hospitalization episodes of care among people with and without HIV in British Columbia, Canada. 
-BMC Medical Research Methodology. 2025.
+BMC Medical Research Methodology. 2025; 25:161. (Open-access: https://pmc.ncbi.nlm.nih.gov/articles/PMC12211187/pdf/12874_2025_Article_2602.pdf)
+
+Note that this code was designed based on administrative hospitalization records in the Canadian province of British Columbia, based on the Discharge Abstract Database (DAD) records provided by Population Data BC.
+As such the data structure and field names may differ in other regions. In the DAD, each record/row of data indicates a discharge from a hospital facility. These can be inpatient acute care hospitalizations or other forms (e.g., day surgery procedures).
+
+The basic concept of a hospitalization episode of care is that individual hospitalization records.
+
+The process for the code outlined below is as follows:
+
+1. Identify which hospitalization records relate to other hospitalization records temporally, for each patient.
+   This is done by sorting hospitalizations in descending order and then using the RETAIN function to flag temporally associated episodes
+
+2. All hospitalization records fully nested within another hospitalization, or overlapping with another hospitalization by > 1 date were automatically combined 
+
+3. Identify which indications of a planned interhosptial transfer were noted among each record 
+   (HospTO = the destination hospital i.e. where a person was meant to be transferred; HospFROM = the source hospital i.e. from where a person was meant to be transferred)
+
+4. Create an episode level identifier based on this information (i.e., multiple associated hospitalization records would have the same episode idenfier (EOC_ID).
+   This identifier rather than the individual row/record, becomes the unit of analysis for using hospitalization episodes rather than individual records.
+   Note that all episodes were based on a gap from discharge to next admissionj
+
+5. Each version of the episode creation definitions are flagged, for users to use their preferred definition. 
+   Additionally
 
 */
